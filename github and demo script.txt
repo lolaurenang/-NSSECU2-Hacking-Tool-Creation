@@ -1,0 +1,27 @@
+GITHUB LINK:https://github.com/lolaurenang/-NSSECU2-Hacking-Tool-Creation
+
+TOOL DEMO (My device: windows – 172.16.15.10 Metasploit – 172.16.15.25)
+
+1. Host discovery only
+python specter_scan.py -t 172.16.15.0/24 --discover-only
+
+2. Quick scan
+python specter_scan.py -t 172.16.15.10 --profile quick
+
+3. Custom port scan
+python specter_scan.py -t 172.16.15.25 -p 21,22,23,80,139,445,3306,5432,8180
+
+4. SYN scan
+sudo python specter_scan.py -t 172.16.15.10 --syn
+
+5. Service/version detection
+python specter_scan.py -t 172.16.15.25 --sV
+
+6. OS fingerprinting
+python specter_scan.py -t 172.16.15.10 --os
+
+7. Full combo scan and export a report as json
+python specter_scan.py -t 172.16.15.25 --profile full --sV --os -o results.json
+
+8.Full scan and export a report as csv: 
+python specter_scan.py -t 172.16.15.10 --profile full --sV --os -o report.csv
