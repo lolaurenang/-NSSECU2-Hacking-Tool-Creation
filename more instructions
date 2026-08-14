@@ -1,6 +1,0 @@
-On the demo setup itself (also detailed in the manual's Section 10):
-
-Attacker VM: Kali Linux (or any Linux VM with Python 3.8+) running Specter.
-Target VM(s): 1–3 VMs with varied services — e.g. Metasploitable2/3 (gives you an outdated-version advisory hit for free), a Windows VM (RDP/SMB open), and a plain Ubuntu Server (SSH + web).
-Networking: a Host-Only or Internal virtual network in VirtualBox/VMware — no bridge to the internet — with every VM's adapter attached to it.
-Demo flow: --discover-only sweep → quick scan with --sV → add --os on one host → --profile full with -o report.csv on that host → point out an advisory note in the output.
